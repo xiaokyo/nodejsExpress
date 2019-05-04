@@ -1,0 +1,31 @@
+@url = http://localhost:3000
+@json = content-type: application/json
+
+### 获取用户列表
+get {{url}}/
+
+### 登入
+POST {{url}}/login
+{{json}}
+
+{
+    "username": "xiaokyo1",
+    "password": "123456"
+}
+
+### 注册
+post {{url}}/register
+{{json}}
+
+{
+    "username":"xiaokyo3222",
+    "password":"123456"
+}
+
+### 获取用户信息
+get {{url}}/users/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q1MmI2OThmOTQ5MTdhNGZmOWQ5OCIsImlhdCI6MTU1Njk2NDMxMn0.WZLdBxmTXSTnmSX8OjOTCrYmk_UDMmbty77MVV_EsTU
+
+### 获取用户列表
+get {{url}}/users/userlist
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q1MmI2OThmOTQ5MTdhNGZmOWQ5OCIsImlhdCI6MTU1Njk2NDMxMn0.WZLdBxmTXSTnmSX8OjOTCrYmk_UDMmbty77MVV_EsTU
