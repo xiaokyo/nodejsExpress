@@ -18,7 +18,7 @@ post {{url}}/register
 {{json}}
 
 {
-    "username":"xiaokyo3222",
+    "username":"xiaokyo4",
     "password":"123456"
 }
 
