@@ -8,11 +8,11 @@ module.exports = {
     if (!req.user) {
       return res.send ('error');
     }
-    res.send (response.Success (req.user));
+    res.json (response.Success (req.user));
   },
   userlist: async function (req, res) {
     // user list
     const user = await User.find ();
-    res.send (response.Success (user));
+    res.json (response.Success (user));
   },
 };

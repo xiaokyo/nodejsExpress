@@ -9,7 +9,7 @@ POST {{url}}/login
 {{json}}
 
 {
-    "username": "xiaokyo1",
+    "username": "xiaokyo4",
     "password": "123456"
 }
 
@@ -24,8 +24,8 @@ post {{url}}/register
 
 ### 获取用户信息
 get {{url}}/users/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q1MmI2OThmOTQ5MTdhNGZmOWQ5OCIsImlhdCI6MTU1Njk2NDMxMn0.WZLdBxmTXSTnmSX8OjOTCrYmk_UDMmbty77MVV_EsTU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q3ZGRkZTUyZmUyMTVhMGY4YzRkZiIsImlhdCI6MTU1NzA1NzgyM30.WCH4m8a0Ao_Auoq1-eAGFluHQsN3C0OrxQUtiLaQAzQ
 
 ### 获取用户列表
 get {{url}}/users/userlist
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q1MmI2OThmOTQ5MTdhNGZmOWQ5OCIsImlhdCI6MTU1Njk2NDMxMn0.WZLdBxmTXSTnmSX8OjOTCrYmk_UDMmbty77MVV_EsTU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q3ZGRkZTUyZmUyMTVhMGY4YzRkZiIsImlhdCI6MTU1NzA1NzgyM30.WCH4m8a0Ao_Auoq1-eAGFluHQsN3C0OrxQUtiLaQAzQ

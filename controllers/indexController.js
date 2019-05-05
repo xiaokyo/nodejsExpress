@@ -11,9 +11,9 @@ module.exports = {
         username: req.body.username,
         password: req.body.password,
       });
-      res.send (response.Success (user));
+      res.json (response.Success (user));
     } catch (error) {
-      res.send (response.Error (error.errmsg));
+      res.json (response.Error (error.errmsg));
     }
   },
   login: async function (req, res) {
@@ -23,7 +23,7 @@ module.exports = {
     });
 
     if (!user) {
-      return res.status (422).send (response.Error ('用户不存在'));
+      return res.status (422).json (response.Error ('用户不存在'));
     }
 
     const isPasswordValid = require ('bcrypt').compareSync (
@@ -32,7 +32,7 @@ module.exports = {
     );
 
     if (!isPasswordValid) {
-      return res.status (422).send (response.Error ('密码不匹配'));
+      return res.status (422).json (response.Error ('密码不匹配'));
     }
 
     const token = jwt.sign (
@@ -41,7 +41,7 @@ module.exports = {
       },
       secret
     );
-    res.send (
+    res.json (
       response.Success ({
         // user: user,
         token: token,
