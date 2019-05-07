@@ -11,6 +11,9 @@ const config = {
       useNewUrlParser: true,
     },
   },
+  redis:{
+    
+  }
 };
 
 module.exports = config;
