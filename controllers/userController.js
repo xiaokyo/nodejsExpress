@@ -4,7 +4,7 @@ const response = require ('./response');
 
 module.exports = {
   getUserInfo: async function (req, res) {
-    console.log (req.user);
+    // console.log (req.user);
     if (!req.user) {
       return res.send ('error');
     }

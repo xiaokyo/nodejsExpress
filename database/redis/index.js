@@ -1,20 +1,20 @@
-var redis = require('redis')
-var client = redis.createClient()
+var redis = require ('redis');
+var redisClient = redis.createClient ();
 
-client.on('error', function (err) {
-  console.log('Error ' + err)
-})
+redisClient.on ('error', function (err) {
+  console.log ('Error ' + err);
+});
 
-client.set('string key', 'string val', redis.print)
-client.hset('hash key', 'hashtest 1', 'some value', redis.print)
-client.hset(['hash key', 'hashtest 2', 'some other value'], redis.print)
+// client.set ('string key', 'string val');
 
-client.hkeys('hash key', function (err, replies) {
-  console.log(replies.length + ' replies:')
+// client.get ('string key', function (err, val) {
+//   console.log (val);
+// });
 
-  replies.forEach(function (reply, i) {
-    console.log('    ' + i + ': ' + reply)
-  })
+// // client.quit ();
 
-  client.quit()
-})
+// client.get ('string key', function (err, val) {
+//   console.log (val);
+// });
+
+module.exports = {redisClient};
