@@ -7,17 +7,19 @@ const {redisClient} = require ('../database/redis');
 require ('../database/redis');
 
 module.exports = {
-  register: async function (req, res) {
+  register: async function (req, res, next) {
     // register user
-    try {
-      const user = await User.create ({
-        username: req.body.username,
-        password: req.body.password,
-      });
-      res.json (response.Success (user));
-    } catch (error) {
-      res.json (response.Error (error.errmsg));
-    }
+    const isExistUser = await User.findOne ({
+      username: req.body.username,
+    });
+
+    if (isExistUser) return next (new Error ('用户已存在'));
+
+    const user = await User.create ({
+      username: req.body.username,
+      password: req.body.password,
+    });
+    res.json (response.Success ());
   },
   login: async function (req, res) {
     // login user
@@ -45,18 +47,13 @@ module.exports = {
       secret
     );
 
-    redisClient.set (token, String (user._id));
-    redisClient.expire (token, 60);
+    redisClient.set (token, String (user._id)); //token和uid存入缓存redis
+    redisClient.expire (token, 60 * 60 * 24 * 7); //token 过期时间
 
     res.json (
       response.Success ({
-        // user: user,
         token: token,
       })
     );
-  },
-
-  redis: function (req, res) {
-    res.send ('redis');
   },
 };

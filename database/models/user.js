@@ -7,7 +7,8 @@ const userSchema = new mongoose.Schema ({
       return require ('bcrypt').hashSync (val, 10);
     },
   },
-  token:{type:String}
+  phone: {type: String, unique: true},
+  gender: {type: String},
 });
 const User = mongoose.model ('User', userSchema);
 

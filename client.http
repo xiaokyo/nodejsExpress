@@ -1,15 +1,13 @@
 @url = http://localhost:3000
 @json = content-type: application/json
 
-### 获取用户列表
-get {{url}}/
 
 ### 登入
 POST {{url}}/login
 {{json}}
 
 {
-    "username": "xiaokyo1",
+    "username": "xiaokyo4",
     "password": "123456"
 }
 
@@ -18,14 +16,24 @@ post {{url}}/register
 {{json}}
 
 {
-    "username":"xiaokyo4",
+    "username":"pokemengo1",
     "password":"123456"
 }
 
 ### 获取用户信息
 get {{url}}/users/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q1MmI2OThmOTQ5MTdhNGZmOWQ5OCIsImlhdCI6MTU1NzI4NDI3NH0.DOwTP4yjwjBkDxgpjKrOfWbf-Ek7DwBj4OqRwrcomTU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjZDI3ZmY0OTUwNDc2MTc1NDc3ZWYyOSIsImlhdCI6MTU1NzI5OTE5Nn0.xw9hdXWYRpRKApjK0pAKq7MXATr1ipgqYXi3-CU_5sI
 
 ### 获取用户列表
 get {{url}}/users/userlist
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q1MmI2OThmOTQ5MTdhNGZmOWQ5OCIsImlhdCI6MTU1NzI4NDI3NH0.DOwTP4yjwjBkDxgpjKrOfWbf-Ek7DwBj4OqRwrcomTU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q1MmI2OThmOTQ5MTdhNGZmOWQ5OCIsImlhdCI6MTU1NzI5NjYyOX0.Kcwx3XMAHs26SPTPgI9PB8WUlFWr2oMgsti_9YzOQog
+
+### 修改用户信息
+post {{url}}/users/updateUser
+{{json}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjZDI3ZmY0OTUwNDc2MTc1NDc3ZWYyOSIsImlhdCI6MTU1NzI5OTE5Nn0.xw9hdXWYRpRKApjK0pAKq7MXATr1ipgqYXi3-CU_5sI
+
+{
+  "username":"zhengwenjian5",
+  "phone":"18989443542"
+}

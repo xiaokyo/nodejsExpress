@@ -1,5 +1,5 @@
 module.exports = {
-  Success: function (data) {
+  Success: function (data = {}) {
     var _json = {
       code: 0,
       msg: 'success',

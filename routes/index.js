@@ -8,6 +8,5 @@ var {userlist, login, register,redis} = require ('../controllers/indexController
 router.post ('/login', login);
 router.post ('/register', register);
 
-router.get ('/redis', redis);
 
 module.exports = router;
