@@ -9,6 +9,9 @@ client.set('string key', 'string val', redis.print)
 client.hset('hash key', 'hashtest 1', 'some value', redis.print)
 client.hset(['hash key', 'hashtest 2', 'some other value'], redis.print)
 
+var stringKey = client.hget('hashtest 1', redis.print);
+console.log(stringKey);
+
 client.hkeys('hash key', function (err, replies) {
   console.log(replies.length + ' replies:')
 
