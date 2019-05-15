@@ -10,6 +10,7 @@ const jwt = require ('jsonwebtoken');
 
 const auth = async function (req, res, next) {
   const token = String (req.headers.authorization).split (' ').pop ();
+  req.accessToken = token;
   redisClient.get (token, function (err, val) {
     if (!val) {
       return next (new Error ('token已过期'));
@@ -27,11 +28,12 @@ var {
   getUserInfo,
   userlist,
   updateUserInfo,
+  logout,
 } = require ('../controllers/userController');
 /* GET users listing. */
 router.get ('/', getUserInfo);
 router.get ('/userlist', userlist);
-
+router.get ('/logout', logout);
 router.post ('/updateUser', updateUserInfo);
 
 module.exports = router;

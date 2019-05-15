@@ -4,7 +4,7 @@ const {secret} = require ('../config');
 const jwt = require ('jsonwebtoken');
 const {redisClient} = require ('../database/redis');
 
-require ('../database/redis');
+// require ('../database/redis');
 
 module.exports = {
   register: async function (req, res, next) {

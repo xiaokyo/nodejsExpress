@@ -11,6 +11,11 @@ POST {{url}}/login
     "password": "123456"
 }
 
+### 登出
+get {{url}}/users/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjZDNjOGNmYTBiNzkwMWQ4NGZlNjJiZCIsImlhdCI6MTU1NzkwNzU5OX0.hdvc5smY4AgItMtXbUYOrqKwQgz9L3YVcWXFL8PZgro
+
+
 ### 注册
 post {{url}}/register
 {{json}}
@@ -22,11 +27,11 @@ post {{url}}/register
 
 ### 获取用户信息
 get {{url}}/users/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjZDI3ZmY0OTUwNDc2MTc1NDc3ZWYyOSIsImlhdCI6MTU1NzI5OTE5Nn0.xw9hdXWYRpRKApjK0pAKq7MXATr1ipgqYXi3-CU_5sI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjZDNjOGNmYTBiNzkwMWQ4NGZlNjJiZCIsImlhdCI6MTU1NzkwNzU5OX0.hdvc5smY4AgItMtXbUYOrqKwQgz9L3YVcWXFL8PZgro
 
 ### 获取用户列表
 get {{url}}/users/userlist
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q1MmI2OThmOTQ5MTdhNGZmOWQ5OCIsImlhdCI6MTU1NzI5NjYyOX0.Kcwx3XMAHs26SPTPgI9PB8WUlFWr2oMgsti_9YzOQog
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjZDNjOGNmYTBiNzkwMWQ4NGZlNjJiZCIsImlhdCI6MTU1NzkwNzU5OX0.hdvc5smY4AgItMtXbUYOrqKwQgz9L3YVcWXFL8PZgro
 
 ### 修改用户信息
 post {{url}}/users/updateUser
@@ -34,6 +39,6 @@ post {{url}}/users/updateUser
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjZDI3ZmY0OTUwNDc2MTc1NDc3ZWYyOSIsImlhdCI6MTU1NzI5OTE5Nn0.xw9hdXWYRpRKApjK0pAKq7MXATr1ipgqYXi3-CU_5sI
 
 {
-  "username":"zhengwenjian5",
+  "username":"zhengwenjian",
   "phone":"18989443542"
 }
