@@ -7,13 +7,13 @@ POST {{url}}/login
 {{json}}
 
 {
-    "username": "xiaokyo4",
+    "username": "xiaokyo",
     "password": "123456"
 }
 
 ### 登出
 get {{url}}/users/logout
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjZDNjOGNmYTBiNzkwMWQ4NGZlNjJiZCIsImlhdCI6MTU1NzkwNzU5OX0.hdvc5smY4AgItMtXbUYOrqKwQgz9L3YVcWXFL8PZgro
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q1MmZiOThmOTQ5MTdhNGZmOWQ5OSIsImlhdCI6MTU1NzkxMjcyOX0.8tI7dBuopIHGM1S5PArLCm9rb70tIns8ajCRS2_G75c
 
 
 ### 注册
@@ -27,18 +27,18 @@ post {{url}}/register
 
 ### 获取用户信息
 get {{url}}/users/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjZDNjOGNmYTBiNzkwMWQ4NGZlNjJiZCIsImlhdCI6MTU1NzkwNzU5OX0.hdvc5smY4AgItMtXbUYOrqKwQgz9L3YVcWXFL8PZgro
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q1MmZiOThmOTQ5MTdhNGZmOWQ5OSIsImlhdCI6MTU1NzkxMjcyOX0.8tI7dBuopIHGM1S5PArLCm9rb70tIns8ajCRS2_G75c
 
 ### 获取用户列表
 get {{url}}/users/userlist
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjZDNjOGNmYTBiNzkwMWQ4NGZlNjJiZCIsImlhdCI6MTU1NzkwNzU5OX0.hdvc5smY4AgItMtXbUYOrqKwQgz9L3YVcWXFL8PZgro
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q1MmZiOThmOTQ5MTdhNGZmOWQ5OSIsImlhdCI6MTU1NzkxMjcyOX0.8tI7dBuopIHGM1S5PArLCm9rb70tIns8ajCRS2_G75c
 
 ### 修改用户信息
 post {{url}}/users/updateUser
 {{json}}
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjZDI3ZmY0OTUwNDc2MTc1NDc3ZWYyOSIsImlhdCI6MTU1NzI5OTE5Nn0.xw9hdXWYRpRKApjK0pAKq7MXATr1ipgqYXi3-CU_5sI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q1MmZiOThmOTQ5MTdhNGZmOWQ5OSIsImlhdCI6MTU1NzkxMjcyOX0.8tI7dBuopIHGM1S5PArLCm9rb70tIns8ajCRS2_G75c
 
 {
-  "username":"zhengwenjian",
-  "phone":"18989443542"
+  "phone":"18989443542",
+  "attrUrl":"https://img.xiaoduyu.com/FnSA2VQBP1s_T_KjDuVKxFZ8EoQp"
 }

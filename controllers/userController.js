@@ -6,6 +6,9 @@ const jwt = require ('jsonwebtoken');
 const {redisClient} = require ('../database/redis');
 
 module.exports = {
+  validateToken: function (req, res) {
+    res.json (response.Success ({}));
+  },
   logout: async function (req, res) {
     const flag = redisClient.expire (req.accessToken, 0); //token 过期时间
     if (flag) {
@@ -39,6 +42,7 @@ module.exports = {
         username: req.body.username,
         phone: req.body.phone,
         gender: 'f',
+        attrUrl: req.body.attrUrl,
       },
       {
         upsert: true,

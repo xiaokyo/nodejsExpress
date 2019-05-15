@@ -9,6 +9,7 @@ const userSchema = new mongoose.Schema ({
   },
   phone: {type: String, unique: true},
   gender: {type: String},
+  attrUrl: {type: String},
 });
 const User = mongoose.model ('User', userSchema);
 

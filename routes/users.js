@@ -29,9 +29,11 @@ var {
   userlist,
   updateUserInfo,
   logout,
+  validateToken,
 } = require ('../controllers/userController');
 /* GET users listing. */
 router.get ('/', getUserInfo);
+router.get ('/validateToken', validateToken);
 router.get ('/userlist', userlist);
 router.get ('/logout', logout);
 router.post ('/updateUser', updateUserInfo);

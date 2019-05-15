@@ -5,7 +5,8 @@ module.exports = {
       msg: 'success',
       data: data,
     };
-    return JSON.stringify (_json);
+    // return JSON.stringify (_json);
+    return _json;
   },
   Error: function (msg = 'error') {
     var _json = {
@@ -13,6 +14,7 @@ module.exports = {
       msg: msg,
       data: {},
     };
-    return JSON.stringify (_json);
+    // return JSON.stringify (_json);
+    return _json
   },
 };
