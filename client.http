@@ -7,7 +7,7 @@ POST {{url}}/login
 {{json}}
 
 {
-    "username": "xiaokyo",
+    "username": "xiaokyo4",
     "password": "123456"
 }
 
@@ -30,7 +30,7 @@ get {{url}}/users/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q1MmZiOThmOTQ5MTdhNGZmOWQ5OSIsImlhdCI6MTU1NzkxMjcyOX0.8tI7dBuopIHGM1S5PArLCm9rb70tIns8ajCRS2_G75c
 
 ### 获取用户列表
-get {{url}}/users/userlist
+get {{url}}/users/userlist/2/0
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q1MmZiOThmOTQ5MTdhNGZmOWQ5OSIsImlhdCI6MTU1NzkxMjcyOX0.8tI7dBuopIHGM1S5PArLCm9rb70tIns8ajCRS2_G75c
 
 ### 修改用户信息
@@ -39,6 +39,7 @@ post {{url}}/users/updateUser
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q1MmZiOThmOTQ5MTdhNGZmOWQ5OSIsImlhdCI6MTU1NzkxMjcyOX0.8tI7dBuopIHGM1S5PArLCm9rb70tIns8ajCRS2_G75c
 
 {
+  "username":"xiaokyo",
   "phone":"18989443542",
   "attrUrl":"https://img.xiaoduyu.com/FnSA2VQBP1s_T_KjDuVKxFZ8EoQp"
 }

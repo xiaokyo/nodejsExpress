@@ -8,6 +8,7 @@ const {redisClient} = require ('../database/redis');
 const {secret} = require ('../config');
 const jwt = require ('jsonwebtoken');
 
+// 验证token
 const auth = async function (req, res, next) {
   const token = String (req.headers.authorization).split (' ').pop ();
   req.accessToken = token;
@@ -34,7 +35,7 @@ var {
 /* GET users listing. */
 router.get ('/', getUserInfo);
 router.get ('/validateToken', validateToken);
-router.get ('/userlist', userlist);
+router.get ('/userlist/:limit/:skipCount', userlist);
 router.get ('/logout', logout);
 router.post ('/updateUser', updateUserInfo);
 

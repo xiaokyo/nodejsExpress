@@ -1,8 +1,8 @@
 module.exports = {
-  Success: function (data = {}) {
+  Success: function (data = {}, msg = 'success') {
     var _json = {
       code: 0,
-      msg: 'success',
+      msg: msg,
       data: data,
     };
     // return JSON.stringify (_json);
@@ -15,6 +15,6 @@ module.exports = {
       data: {},
     };
     // return JSON.stringify (_json);
-    return _json
+    return _json;
   },
 };

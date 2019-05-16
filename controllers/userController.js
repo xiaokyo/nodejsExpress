@@ -7,7 +7,7 @@ const {redisClient} = require ('../database/redis');
 
 module.exports = {
   validateToken: function (req, res) {
-    res.json (response.Success ({}));
+    res.json (response.Success ());
   },
   logout: async function (req, res) {
     const flag = redisClient.expire (req.accessToken, 0); //token 过期时间
@@ -23,7 +23,10 @@ module.exports = {
   },
   userlist: async function (req, res) {
     // user list
-    const user = await User.find ();
+    console.log (req.params.limit);
+    let _limit = parseInt (req.params.limit);
+    let _skipCount = parseInt (req.params.skipCount);
+    const user = await User.find ().limit (_limit).skip (_skipCount);
     res.json (response.Success (user));
   },
   updateUserInfo: async function (req, res, next) {
