@@ -13,11 +13,17 @@ module.exports = {
       username: req.body.username,
     });
 
+    const isExistPhone = await User.findOne ({
+      phone: req.body.phone,
+    });
+
     if (isExistUser) return next (new Error ('用户已存在'));
+    if (isExistPhone) return next (new Error ('手机号码已注册'));
 
     const user = await User.create ({
       username: req.body.username,
       password: req.body.password,
+      phone: req.body.phone,
     });
     res.json (response.Success ());
   },

@@ -1,19 +1,18 @@
 @url = http://localhost:3000
 @json = content-type: application/json
 
-
 ### 登入
 POST {{url}}/login
 {{json}}
 
 {
-    "username": "xiaokyo4",
+    "username": "xiaokyo",
     "password": "123456"
 }
 
 ### 登出
 get {{url}}/users/logout
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q1MmZiOThmOTQ5MTdhNGZmOWQ5OSIsImlhdCI6MTU1NzkxMjcyOX0.8tI7dBuopIHGM1S5PArLCm9rb70tIns8ajCRS2_G75c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjZGUyODdhZDc1MGI0MThhOGIyNDRkMyIsImlhdCI6MTU1ODA2MzI5OX0.SlgiZgW3VEs5FUIr3ikH4pz9_J4e1GvR8gAZHo2qXNM
 
 
 ### 注册
@@ -21,25 +20,27 @@ post {{url}}/register
 {{json}}
 
 {
-    "username":"pokemengo1",
-    "password":"123456"
+    "username":"xiaokyo7",
+    "password":"123456",
+    "phone":"189894435427"
 }
 
 ### 获取用户信息
 get {{url}}/users/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q1MmZiOThmOTQ5MTdhNGZmOWQ5OSIsImlhdCI6MTU1NzkxMjcyOX0.8tI7dBuopIHGM1S5PArLCm9rb70tIns8ajCRS2_G75c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjZGUyODdhZDc1MGI0MThhOGIyNDRkMyIsImlhdCI6MTU1ODA2MzI5OX0.SlgiZgW3VEs5FUIr3ikH4pz9_J4e1GvR8gAZHo2qXNM
 
 ### 获取用户列表
-get {{url}}/users/userlist/2/0
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q1MmZiOThmOTQ5MTdhNGZmOWQ5OSIsImlhdCI6MTU1NzkxMjcyOX0.8tI7dBuopIHGM1S5PArLCm9rb70tIns8ajCRS2_G75c
+get {{url}}/users/userlist/10/0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjZGUyODdhZDc1MGI0MThhOGIyNDRkMyIsImlhdCI6MTU1ODA2MzI5OX0.SlgiZgW3VEs5FUIr3ikH4pz9_J4e1GvR8gAZHo2qXNM
 
 ### 修改用户信息
 post {{url}}/users/updateUser
 {{json}}
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjY2Q1MmZiOThmOTQ5MTdhNGZmOWQ5OSIsImlhdCI6MTU1NzkxMjcyOX0.8tI7dBuopIHGM1S5PArLCm9rb70tIns8ajCRS2_G75c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjZGUyODdhZDc1MGI0MThhOGIyNDRkMyIsImlhdCI6MTU1ODA2MzI5OX0.SlgiZgW3VEs5FUIr3ikH4pz9_J4e1GvR8gAZHo2qXNM
 
 {
   "username":"xiaokyo",
   "phone":"18989443542",
   "attrUrl":"https://img.xiaoduyu.com/FnSA2VQBP1s_T_KjDuVKxFZ8EoQp"
 }
+

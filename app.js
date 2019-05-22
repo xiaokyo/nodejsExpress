@@ -8,8 +8,6 @@ var indexRouter = require ('./routes/index');
 var usersRouter = require ('./routes/users');
 
 var app = express ();
-// socket io
-require ('./socket');
 
 // view engine setup
 // app.set('views', path.join(__dirname, 'views'));
@@ -23,6 +21,10 @@ app.use (express.static (path.join (__dirname, 'public')));
 
 app.use ('/', indexRouter);
 app.use ('/users', usersRouter);
+
+// graphqlServer
+var setGraphqlServer = require ('./graphql');
+setGraphqlServer (app);
 
 // catch 404 and forward to error handler
 app.use (function (req, res, next) {

@@ -23,7 +23,7 @@ module.exports = {
   },
   userlist: async function (req, res) {
     // user list
-    console.log (req.params.limit);
+    // console.log (req.params.limit);
     let _limit = parseInt (req.params.limit);
     let _skipCount = parseInt (req.params.skipCount);
     const user = await User.find ().limit (_limit).skip (_skipCount);
