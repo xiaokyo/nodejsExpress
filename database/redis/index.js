@@ -17,4 +17,22 @@ redisClient.on ('error', function (err) {
 //   console.log (val);
 // });
 
-module.exports = {redisClient};
+var getRedisValue = key => {
+  return new Promise ((resolve, reject) => {
+    redisClient.get (key, function (err, val) {
+      if (err) {
+        // return throw new Error ('redis error');
+        reject (err);
+      }
+
+      if (val) {
+        // return val;
+        resolve (val);
+      } else {
+        resolve (val);
+      }
+    });
+  });
+};
+
+module.exports = {redisClient, getRedisValue};

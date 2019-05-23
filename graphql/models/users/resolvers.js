@@ -1,6 +1,14 @@
 var {User} = require ('../../../database/models');
 
-const users = async () => {
+const users = async (parent, args, context, info) => {
+  const {username} = args;
+  // console.log (username);
+  if (username) {
+    return await User.find ({
+      username: new RegExp (username, 'i'),
+    });
+  }
+
   var users = await User.find ();
   return users;
 };
@@ -19,7 +27,14 @@ const addUser = async (parent, {username, password, phone}, context, info) => {
 };
 
 const deleteUser = async (parent, {username}, context, info) => {
-  console.log (context.id);
+  // console.log (JSON.stringify (context));
+  if (!context.id) {
+    return {
+      msg: '请先登入管理员账户',
+      success: false,
+    };
+  }
+
   const user = await User.findOne ({
     username: username,
   });

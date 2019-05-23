@@ -54,7 +54,7 @@ module.exports = {
     );
 
     redisClient.set (token, String (user._id)); //token和uid存入缓存redis
-    redisClient.expire (token, 60 * 60 * 24 * 7); //token 过期时间
+    redisClient.expire (token, 60*60*24*7); //token 过期时间
 
     res.json (
       response.Success ({

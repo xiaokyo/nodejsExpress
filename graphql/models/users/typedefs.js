@@ -8,7 +8,7 @@ const Schema = `
 
 const Query = `
   type Query{
-    users:[User]
+    users(username:String):[User]
   }
 `;
 
